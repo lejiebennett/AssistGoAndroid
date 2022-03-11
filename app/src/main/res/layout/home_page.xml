@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/settingmenu" />
+        app:menu="@menu/blankmenu" />
 
     <TableLayout
         android:id="@+id/homeTable"

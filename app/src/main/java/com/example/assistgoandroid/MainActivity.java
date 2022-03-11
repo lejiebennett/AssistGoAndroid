@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         callLabelBtn = findViewById(R.id.callBtnLabel);
         messageLabelBtn = findViewById(R.id.messageBtnLabel);
         translateLabelBtn = findViewById(R.id.translateBtnLabel);
+        emergencyLabel = findViewById(R.id.emergencyBtn);
 
 
         contactImageBtn = findViewById(R.id.contactImageBtn);
@@ -38,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        LinearLayout contactLayout = findViewById(R.id.contactLayout);
-        contactLayout.setOnClickListener(new View.OnClickListener() {
+        contactLabelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, contactActivity.class);
@@ -48,8 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout callLayout = findViewById(R.id.callLayout);
-        callLayout.setOnClickListener(new View.OnClickListener() {
+        callImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, callActivity.class);
+                startActivity(intent);
+            }
+        });
+        callLabelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, callActivity.class);
@@ -57,18 +62,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout messageLayout = findViewById(R.id.messageLayout);
-        messageLayout.setOnClickListener(new View.OnClickListener() {
+        messageImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, messageActivity.class);
                 startActivity(intent);
-
+            }
+        });
+        messageLabelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, messageActivity.class);
+                startActivity(intent);
             }
         });
 
-        LinearLayout translateLayout = findViewById(R.id.translateLayout);
-        translateLayout.setOnClickListener(new View.OnClickListener() {
+
+
+        translateImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, translateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        translateLabelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, translateActivity.class);
